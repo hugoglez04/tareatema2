@@ -31,8 +31,8 @@ class Alumno extends Miembro {
     private bool $cursoAbonado = false;
 
     // Constructor
-    public function __construct(int $id, string $nombre, string $apellidos, string $email, int $edad) {
-        parent::__construct($id, $nombre, $apellidos, $email, $edad);
+    public function __construct(string $nombre, string $apellidos, string $email, int $edad) {
+        parent::__construct( $nombre, $apellidos, $email, $edad);
     }
 
     // Método para abonar el curso
@@ -64,9 +64,16 @@ class Alumno extends Miembro {
     // Método estático para crear alumnos de muestra
     public static function crearAlumnosDeMuestra(): array {
         return [
-            new Alumno(1, "Juan", "Pérez", "juan@example.com", 20),
-            new Alumno(2, "Ana", "Gómez", "ana@example.com", 22),
-            new Alumno(3, "Luis", "Martínez", "luis@example.com", 19),
+            new Alumno("Laura", "Martínez", "laura.martinez@email.com", 22),
+            new Alumno("Sergio", "López", "sergio.lopez@email.com", 25),
+            new Alumno("Carlos", "García", "carlos.garcia@email.com", 24),
+            new Alumno("Marta", "Sánchez", "marta.sanchez@email.com", 23),
+            new Alumno("Alba", "Fernández", "alba.fernandez@email.com", 21),
+            new Alumno("David", "Rodríguez", "david.rodriguez@email.com", 26),
+            new Alumno("Lucía", "Jiménez", "lucia.jimenez@email.com", 20),
+            new Alumno("Jorge", "Pérez", "jorge.perez@email.com", 22),
+            new Alumno("Elena", "Romero", "elena.romero@email.com", 23),
+            new Alumno("Pablo", "Torres", "pablo.torres@email.com", 24)
         ];
     }
 
